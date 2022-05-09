@@ -8,11 +8,14 @@ var generateBtn = document.querySelector("#generate");
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 var captalizedAlphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
-list = []
 
-document.generateBtn.addEventListener("click", function generatePassword(){
 
-  for (i =0; i < 8; i++){
+function generatePassword() {
+
+
+  list = []
+
+  for (let i = 0; i < 8; i++){
     var randomNum = Math.floor(Math.random() * 10 + 1);
     var randomLetter = Math.floor(Math.random() * 26 + 1);
     var randomCapLetter = Math.floor(Math.random() * 26 + 1);
@@ -24,22 +27,13 @@ document.generateBtn.addEventListener("click", function generatePassword(){
     list.push(capLetter);
   
   }
-  text = join(list)
-  alert(text)
 
-})
+  text = list.join('')
+  console.log(text)
+  document.querySelector("textarea").setAttribute("placeholder", text)
+  
+}
 
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.setAttributes("placeholder", "text")
-
-
-
-//   passwordText.value = password;
-
-// }
-
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword);
 
 generatePassword()
