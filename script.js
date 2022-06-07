@@ -186,7 +186,7 @@ document.querySelector("#generate").addEventListener("click", function () {
 
   console.log(password);
 
-  // change the text content to the password specified
+  // change the text content to the
 
   document.querySelector("#password").textContent = password;
 });
