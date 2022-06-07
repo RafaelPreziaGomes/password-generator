@@ -180,6 +180,8 @@ document.querySelector("#generate").addEventListener("click", function () {
     finalArray.push(item);
   }
 
+  // transform final array into a string
+
   var password = finalArray.join("");
 
   console.log(password);
